@@ -1,0 +1,41 @@
+version: '3'
+services:
+  hadoop-master:
+    image: eiswar/hadoop:3.1.2 
+    container_name: hadoop-master
+    hostname: host.hadoop.local
+    volumes:
+      - /hdfs:/hdfs
+      - /root:/root
+      - /home:/home
+    env_file: dev.env
+    ports:
+      - "8030:8030"
+      - "8031:8031"
+      - "8032:8032"
+      - "8033:8033"
+      - "8040:8040"
+      - "8042:8042"
+      - "8088:8088"
+      - "9000:9000"
+      - "9864:9864"
+      - "9866:9866"
+      - "9867:9867"
+      - "9868:9868"
+      - "9870:9870"
+      - "10020:10020"
+      - "10033:10033"
+      - "13562:13562"
+      - "19888:19888"
+      - "33011:33011"
+      - "37319:37319"
+      - "40469:40469"
+    networks:
+      dev:
+        ipv4_address: 172.18.0.2
+networks:
+  dev:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
+

@@ -29,3 +29,15 @@ Eg:
 Once the docker-compose is finished, the single-node hadoop cluster on docker will be up and running. It can be accessed using the IP address specified in the docker-compose file.
 
 We can update the /etc/hosts file with the IP address and hostname for the hadoop node, we can access the resouce manager UI and file manager UI from the browser.
+
+# Features
+
+1. Automatic resource allocation for the mapreduce applications.
+2. Automatic setup of the fair scheduler
+3. This can be easily integrated with Kubernetes. Options for establishing SSH trusts between Hadoop master and worker pods in Kubernetes environment are added.
+
+# To do
+
+1. Enabling HDFS federation
+2. Enabling Namenode High Availability
+
